@@ -26,4 +26,7 @@ insert into products (name, description, code, price) values ('Valorant', 'First
 insert into products (name, description, code, price) values ('Fortnite', '100 player battle royale', '693155505-7', 13.5);
 insert into products (name, description, code, price) values ('Counter Strike: Global offensive', 'First Person Shooter', '686928463-6', 14);
 insert into products (name, description, code, price) values ('Overwatch', 'First Person Shooter', '492662523-7', 14);
-
+insert into products (name, description, code, price) values ('Call of Duty', 'First Person Shooter', '472663823-6', 12);
+insert into products (name, description, code, price) values ('Mortal Kombat', 'Fight game', '138962523-0', 15.5);
+insert into products (name, description, code, price) values ('Smash bros', 'Fight game', '293952523-2', 11);
+insert into products (name, description, code, price) values ('GTA', 'First Person Shooter', '592880514-4', 13);
