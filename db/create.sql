@@ -11,6 +11,20 @@ CREATE TABLE products (
 );
 
 
+CREATE TABLE persons( 
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255),
+  description TEXT,
+ );
+
+
+CREATE TABLE reviews( 
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255),
+  description TEXT,
+ );
+  
+);
 --
 -- populate with data
 --
@@ -30,3 +44,4 @@ insert into products (name, description, code, price) values ('Call of Duty', 'F
 insert into products (name, description, code, price) values ('Mortal Kombat', 'Fight game', '138962523-0', 15.5);
 insert into products (name, description, code, price) values ('Smash bros', 'Fight game', '293952523-2', 11);
 insert into products (name, description, code, price) values ('GTA', 'First Person Shooter', '592880514-4', 13);
+
