@@ -14,14 +14,14 @@ CREATE TABLE products (
 CREATE TABLE persons( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255),
-  description TEXT,
  );
 
 
 CREATE TABLE reviews( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(255),
-  description TEXT,
+  review TEXT ,
+  person_id INTEGER
+  product_id INTEGER 
  );
   
 );
@@ -45,3 +45,14 @@ insert into products (name, description, code, price) values ('Mortal Kombat', '
 insert into products (name, description, code, price) values ('Smash bros', 'Fight game', '293952523-2', 11);
 insert into products (name, description, code, price) values ('GTA', 'First Person Shooter', '592880514-4', 13);
 
+insert into persons (name) values ('Lucas')
+insert into persons (name) values ('Christine')
+insert into persons (name) values ('Aryan')
+insert into persons (name) values ('Rivano')
+insert into persons (name) values ('Yosei')
+
+insert into reviews (review, person_id,) values ("1/5", 1) 
+insert into reviews (review, person_id,) values ("3/5", 2) 
+insert into reviews (review, person_id,) values ("4/5", 3) 
+insert into reviews (review, person_id,) values ("3/5", 4) 
+insert into reviews (review, person_id,) values ("5/5", 5) 
