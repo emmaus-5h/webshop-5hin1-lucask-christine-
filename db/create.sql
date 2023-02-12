@@ -23,7 +23,13 @@ CREATE TABLE reviews(
   person_id INTEGER
   product_id INTEGER 
  );
-  
+
+CREATE TABLE orders( 
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+  orders INTEGER ,
+  product_id INTEGER 
+ );
+
 );
 --
 -- populate with data
