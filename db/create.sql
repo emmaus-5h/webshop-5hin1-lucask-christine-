@@ -2,19 +2,19 @@
 -- create tables
 --
 
-CREATE TABLE products (
+CREATE TABLE products(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  console_id INTEGER,
+  console_id INTEGER
 );
 
 
 CREATE TABLE persons( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(255),
+  name VARCHAR(255)
  );
 
 
@@ -22,18 +22,18 @@ CREATE TABLE reviews(
  id INTEGER PRIMARY KEY AUTOINCREMENT,
   review TEXT ,
   person_id INTEGER,
-  product_id INTEGER ,
+  product_id INTEGER
  );
 
 CREATE TABLE orders( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
   orders INTEGER ,
-  product_id INTEGER ,
+  product_id INTEGER
  );
 
 CREATE TABLE console(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  platform TEXT ,
+  platform TEXT
 );
 --
 -- populate with data
@@ -65,10 +65,11 @@ insert into reviews (review, person_id, product_id) values ("1/5", 1, 2)
 insert into reviews (review, person_id, product_id) values ("4/5", 1, 7)
 insert into reviews (review, person_id, product_id) values ("3/5", 2, 1) 
 insert into reviews (review, person_id, product_id) values ("5/5", 2, 10)  
-insert into reviews (review, person_id, product_id) values ("4/5", 3, 4) 
-insert into reviews (review, person_id, product_id) values ("3/5", 4) 
-insert into reviews (review, person_id, product_id) values ("2/5", 4, 8)  
-insert into reviews (review, person_id, product_id) values ("5/5", 5, 3) 
+insert into reviews (review, person_id, product_id) values ("4/5", 3, 4)
+insert into reviews (review, person_id, product_id) values ("3/5", 4, 7) 
+insert into reviews (review, person_id, product_id) values ("2/5", 4, 8)
+  
+insert into reviews (review, person_id, product_id) values ("5/5", 5, 3)
 insert into reviews (review, person_id, product_id) values ("1/5", 5, 9)
 
 insert into console (platform) values ("xbox")
