@@ -7,7 +7,8 @@ CREATE TABLE products (
   code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2)
+  price NUMERIC(10, 2),
+  console_id INTEGER,
 );
 
 
@@ -20,16 +21,19 @@ CREATE TABLE persons(
 CREATE TABLE reviews( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
   review TEXT ,
-  person_id INTEGER
-  product_id INTEGER 
+  person_id INTEGER,
+  product_id INTEGER ,
  );
 
 CREATE TABLE orders( 
  id INTEGER PRIMARY KEY AUTOINCREMENT,
   orders INTEGER ,
-  product_id INTEGER 
+  product_id INTEGER ,
  );
 
+CREATE TABLE console(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  platform TEXT ,
 );
 --
 -- populate with data
@@ -66,3 +70,14 @@ insert into reviews (review, person_id, product_id) values ("3/5", 4)
 insert into reviews (review, person_id, product_id) values ("2/5", 4, 8)  
 insert into reviews (review, person_id, product_id) values ("5/5", 5, 3) 
 insert into reviews (review, person_id, product_id) values ("1/5", 5, 9)
+
+insert into console (platform) values ("xbox")
+insert into console (platform) values ("playstation")
+insert into console (platform) values ("playstation")
+insert into console (platform) values ("xbox")
+insert into console (platform) values ("nintendo")
+insert into console (platform) values ("xbox")
+insert into console (platform) values ("playstation")
+insert into console (platform) values ("playstation")
+insert into console (platform) values ("xbox")
+insert into console (platform) values ("nintendo")
