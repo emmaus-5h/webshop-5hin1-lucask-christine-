@@ -29,6 +29,10 @@ app.get('/api/echo', echoRequest)
 app.get('/api/categories', getCategories)
 app.get('/api/products', getProducts)
 app.get('/api/products/:id', getProductById)
+app.get('/api/reviews', getReviews)
+app.get('/api/consoles', getConsoles)
+app.get('/api/genres', getGenres)
+
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
 // app.post('/api/products', createProduct)
@@ -81,6 +85,34 @@ function getProductById(request, response) {
   const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products WHERE id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
+}
+
+function getReviews(request, response) {
+  console.log('API ontvangt /api/reviews/', request.query)
+  let data = []
+  const sqlOpdracht = db.prepare('SELECT reviews AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name')
+  data = sqlOpdracht.all()
+  // console.log(JSON.stringify(data, null, 2))
+  response.status(200).send(data)
+  console.log('API verstuurt /api/reviews/')
+}
+function getConsoles(request, response) {
+  console.log('API ontvangt /api/consoles/', request.query)
+  let data = []
+  const sqlOpdracht = db.prepare('SELECT reviews AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name')
+  data = sqlOpdracht.all()
+  // console.log(JSON.stringify(data, null, 2))
+  response.status(200).send(data)
+  console.log('API verstuurt /api/consoles/')
+}
+function getGenres(request, response) {
+  console.log('API ontvangt /api/genres/', request.query)
+  let data = []
+  const sqlOpdracht = db.prepare('SELECT reviews AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name')
+  data = sqlOpdracht.all()
+  // console.log(JSON.stringify(data, null, 2))
+  response.status(200).send(data)
+  console.log('API verstuurt /api/genres/')
 }
 
 /*
