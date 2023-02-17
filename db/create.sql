@@ -8,7 +8,7 @@ CREATE TABLE products(
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  console_id INTEGER
+  console_id INTEGER,
   genre_id INTEGER
 );
 
@@ -44,16 +44,16 @@ CREATE TABLE genres(
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, console_id) values ('Minecraft', 'blokgame', '816905633-0', 10.5, 4, 3);
-insert into products (name, description, code, price, console_id) values ('Mario', 'loodgieter meneer spel', '077030122-3', 11, 3, 4);
-insert into products (name, description, code, price, console_id) values ('Valorant', 'First Person Shooter', '445924201-X', 13.5, 4, 2);
-insert into products (name, description, code, price, console_id) values ('Fortnite', '100 player battle royale', '693155505-7', 13.5, 1, 3);
-insert into products (name, description, code, price, console_id) values ('Counter Strike: Global offensive', 'First Person Shooter', '686928463-6', 14, 4, 1);
-insert into products (name, description, code, price, console_id) values ('Overwatch', 'First Person Shooter', '492662523-7', 14, 4, 1);
-insert into products (name, description, code, price, console_id) values ('Call of Duty', 'First Person Shooter', '472663823-6', 12, 2, 1);
-insert into products (name, description, code, price, console_id) values ('Mortal Kombat', 'Fight game', '138962523-0', 15.5, 2, 2);
-insert into products (name, description, code, price, console_id) values ('Smash bros', 'Fight game', '293952523-2', 11, 2,2);
-insert into products (name, description, code, price, console_id) values ('GTA', 'First Person Shooter', '592880514-4', 13, 1, 3);
+insert into products (name, description, code, price, console_id, genre_id) values ('Minecraft', 'blokgame', '816905633-0', 10.5, 4, 3);
+insert into products (name, description, code, price, console_id, genre_id) values ('Mario', 'loodgieter meneer spel', '077030122-3', 11, 3, 4);
+insert into products (name, description, code, price, console_id, genre_id) values ('Valorant', 'First Person Shooter', '445924201-X', 13.5, 4, 2);
+insert into products (name, description, code, price, console_id, genre_id) values ('Fortnite', '100 player battle royale', '693155505-7', 13.5, 1, 3);
+insert into products (name, description, code, price, console_id, genre_id) values ('Counter Strike: Global offensive', 'First Person Shooter', '686928463-6', 14, 4, 1);
+insert into products (name, description, code, price, console_id, genre_id) values ('Overwatch', 'First Person Shooter', '492662523-7', 14, 4, 1);
+insert into products (name, description, code, price, console_id, genre_id) values ('Call of Duty', 'First Person Shooter', '472663823-6', 12, 2, 1);
+insert into products (name, description, code, price, console_id, genre_id) values ('Mortal Kombat', 'Fight game', '138962523-0', 15.5, 2, 2);
+insert into products (name, description, code, price, console_id, genre_id) values ('Smash bros', 'Fight game', '293952523-2', 11, 2,2);
+insert into products (name, description, code, price, console_id, genre_id) values ('GTA', 'First Person Shooter', '592880514-4', 13, 1, 3);
 
 insert into persons (name) values ('Lucas')
 insert into persons (name) values ('Christine')
