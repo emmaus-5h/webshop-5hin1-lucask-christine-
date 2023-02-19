@@ -32,7 +32,7 @@ app.get('/api/products/:id', getProductById)
 app.get('/api/reviews', getReviews)
 app.get('/api/consoles', getConsoles)
 app.get('/api/genres', getGenres)
-app.get('/api/persons', getPersons)
+//app.get('/api/persons', getPersons)
 
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
@@ -72,7 +72,7 @@ function getCategories(request, response) {
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name JOIN consoles ON console_id = products.console_id')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY name')
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
