@@ -52,7 +52,7 @@ insert into products (name, description, code, price, console_id, genre_id) valu
 insert into products (name, description, code, price, console_id, genre_id) values ('Overwatch', 'First Person Shooter', '492662523-7', 14, 4, 1);
 insert into products (name, description, code, price, console_id, genre_id) values ('Call of Duty', 'First Person Shooter', '472663823-6', 12, 2, 1);
 insert into products (name, description, code, price, console_id, genre_id) values ('Mortal Kombat', 'Fight game', '138962523-0', 15.5, 2, 2);
-insert into products (name, description, code, price, console_id, genre_id) values ('Smash bros', 'Fight game', '293952523-2', 11, 2,2);
+insert into products (name, description, code, price, console_id, genre_id) values ('Tekken', 'Fight game', '293952523-2', 11, 2,2);
 insert into products (name, description, code, price, console_id, genre_id) values ('GTA', 'First Person Shooter', '592880514-4', 13, 1, 3);
 
 insert into persons (name) values ('Lucas')
